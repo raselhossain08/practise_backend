@@ -19,20 +19,13 @@ app.get('/', (req, res) =>{
     res.send('Welcome to longx')
 })
 
-app.use(express.static(path.join(__dirname, 'dist')));
 
-// Route all other requests to the Angular app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/exchange-dashboard/index.html'));
-});
 
 app.use(express.json());
 app.use(bodyParser.json())
 app.use(cookieParser());
 app.use(cors())
-app.use(cors({
-    origin:'https://www.apilongx.xyz/'
-}));
+
 app.use(ErrorMiddleware)
 //  all Routes 
 const auth = require('./routes/auth')
