@@ -40,9 +40,7 @@ app.use('',userVerification)
 // app.use('',doc)
 app.use('',person)
 
+ const uploadRoute = require('./routes/companyVerification');
 
-// const uploadRoute = require('./routes/companyVerification');
-
-
-// app.use(uploadRoute);
+ app.use(uploadRoute);
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
