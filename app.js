@@ -32,17 +32,17 @@ const auth = require('./routes/auth')
 const wallet = require('./routes/wallet')
 
 const userVerification = require('./routes/verification')
-const doc = require('./routes/doc')
+// const doc = require('./routes/doc')
 const person = require('./routes/PersonVerification')
 app.use('',auth)
 app.use('',wallet)
 app.use('',userVerification)
-app.use('',doc)
+// app.use('',doc)
 app.use('',person)
 
 
-const uploadRoute = require('./routes/companyVerification');
+// const uploadRoute = require('./routes/companyVerification');
 
 
-app.use(uploadRoute);
+// app.use(uploadRoute);
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
